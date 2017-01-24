@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>San Diego Top Spots - Angular</title>
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/styles/styles.css">
+    <!-- endinject -->
+</head>
+
+<body ng-controller="TopSpotsController as vm">
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+
+    <h1>SAN DIEGO TOP SPOTS</h1>
+    <div>
+        <table class="table">
+            <tr>
+                <th>NAME</th>
+                <th>DESCRIPTION</th>
+                <th>LOCATION</th>
+            </tr>
+            <tr ng-repeat="topspot in vm.topspots">
+                <td>{{ topspot.name }}</td>
+                <td>{{ topspot.description }}</td>
+                <td><a class="btn btn-primary" target="_blank" href="https://www.google.com/maps?q={{x.location[0]}},{{x.location[1]}}">See Map</a></td>
+            </tr>
+        </table>
+    </div>
+    <!-- inject:js -->
+    <script src="/app/app.js"></script>
+    <script src="/app/topspots.controller.js"></script>
+    <script src="/app/topspots.factory.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>
