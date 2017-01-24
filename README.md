@@ -1,0 +1,1 @@
+# SanDiegoTopSpots-ErrorHandling
