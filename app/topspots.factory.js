@@ -24,8 +24,15 @@
         		method: 'GET',
         		url: '../locations.json'
         	}).then(function(response) {
-
+        		if(typeof response.data === 'object'){
         		defer.resolve(response);
+        		} else {
+        			defer.reject('no data found :(')
+        		}	
+        		
+        	}, function(error) {
+        			console.log(error);
+        			defer.reject(error);
         	});
 
         	return defer.promise;

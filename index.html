@@ -6,6 +6,7 @@
     <title>San Diego Top Spots - Error Handling</title>
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
     <!-- endbower -->
     <!-- inject:css -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
@@ -16,11 +17,15 @@
 <body ng-controller="TopSpotsController as vm">
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
 
     <h1>SAN DIEGO TOP SPOTS</h1>
     <div>
-        <table class="table table-bordereds">
+        <table class="table table-bordered">
             <tr>
                 <th>NAME</th>
                 <th>DESCRIPTION</th>
