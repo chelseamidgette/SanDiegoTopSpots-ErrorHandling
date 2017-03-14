@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
     <!-- endbower -->
     <!-- inject:css -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
     <link rel="stylesheet" href="/app/styles/styles.css">
     <!-- endinject -->
 </head>
@@ -18,7 +17,6 @@
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
@@ -34,7 +32,7 @@
             <tr ng-repeat="topspot in vm.topspots">
                 <td>{{ topspot.name }}</td>
                 <td>{{ topspot.description }}</td>
-                <td><a class="btn btn-primary" target="_blank" href="https://www.google.com/maps?q={{x.location[0]}},{{x.location[1]}}">See Map</a></td>
+                <td><a class="btn btn-primary" target="_blank" href="https://www.google.com/maps?q={{ topspot.location[0] }}, {{ topspot.location[1] }}">See Map</a></td>
             </tr>
         </table>
     </div>
